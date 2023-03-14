@@ -15,27 +15,7 @@ import web2 from "../public/web2.png";
 import web3 from "../public/web3.png";
 export default function Home() {
   
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
   
-
-  const handleChange = (e) =>
-    setValues({ ...values, [e.target.name]: e.target.value });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await fetch("http://localhost:3000/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    });
-  };
-
   const [darkMode, setDarkMode] = useState(false);
   return (
     
@@ -74,52 +54,7 @@ export default function Home() {
          </div>
         </section>
 
-
-        <section>
-          <div>
-            <h3 className="text-3xl text-center font-burtons  dark:text-white">Contact Me</h3><Image src={consulting} width={50} height={100}/>
-            <p className="text-md py-2 leading-8  text-gray-800  dark:text-white">
-            Join forces with me to develop original and <span className="text-teal-500">visually appealing</span> web experiences. I am a tremendous asset for any web development project due to my enthusiasm for user-centered design and <span className="text-teal-500">solid technical abilities</span>.Contact me to talk about how we can make your ideas a reality.
-            </p>
-          </div>
-          <div className="container">
-          <form onSubmit={handleSubmit}>
-          <h3>Contact Form</h3>
-          <div className="input_container">
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={handleChange}
-              placeholder="Enter your name..."
-              className="block p-2.5 w-half text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-cyan-500 focus:border-cyan-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500" 
-            />
-          </div>
-          <div className="input_container">
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-              placeholder="Enter your email..."
-              className="block p-2.5 w-half text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-cyan-500 focus:border-cyan-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500" 
-            />
-          </div>
-          <div className="input_container">
-            <textarea
-              name="message"
-              value={message}
-              onChange={handleChange}
-              placeholder="Enter your message..."
-              className="block p-2.5 w-half text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-cyan-500 focus:border-cyan-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500" 
-            />
-          </div>
-          <div>
-            <button className="bg-gradient-to-r from bg-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8">Send</button>
-          </div>
-        </form>
-          </div>
-        </section>
+        
 
         <section>
         <div >
