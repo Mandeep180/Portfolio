@@ -49,7 +49,7 @@ export default function Home() {
           
          <AiFillYoutube/>
          </div>
-         <div className="relative mx-auto  rounded-full w-20 h-20 mt-20 ">
+         <div className="relative mx-auto  rounded-full w-20 h-15 mt-20 ">
           <Image src={deved} />
          </div>
         </section>
