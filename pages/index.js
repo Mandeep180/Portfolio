@@ -20,7 +20,7 @@ export default function Home() {
     email: "",
     message: "",
   });
-  const { name, email, message } = values;
+  
 
   const handleChange = (e) =>
     setValues({ ...values, [e.target.name]: e.target.value });
