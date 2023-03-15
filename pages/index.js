@@ -116,8 +116,8 @@ export default function Home() {
               </div>
 
             <div className="basis-1/3 flex-1">
-              <Image src={Keyboard} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
-              </div>  
+            <a href="https://case-convert.vercel.app/"><Image src={Keyboard} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/></a>
+              </div>
           </div>
         </section>
       </main>
@@ -125,6 +125,8 @@ export default function Home() {
     </div>
   )
 }
+
+
 
 
 
