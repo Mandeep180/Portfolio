@@ -4,15 +4,13 @@ import {useState} from "react";
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin,AiFillYoutube} from 'react-icons/ai';
 import Image from "next/image";
-import deved from '../public/PastedGraphic.png';
 import design from '../public/design.png'
 import code from '../public/code.png'
-import consulting from '../public/consulting.png'
-import Keyboard from '../public/Keyboard.jpeg';
-import workout from '../public/workout.png';
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web3 from "../public/web3.png";
+import Logo from "../public/Logo.png";
+import eLogo from "../public/eLogo.png";
+import vLogo from "../public/vLogo.jpeg";
+import myImg from "../public/myImg.jpg";
+
 export default function Home() {
   
   
@@ -41,24 +39,61 @@ export default function Home() {
          </nav>
          <div className="text-center p-10">
           <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">Mandeep Kaur</h2>
-          <h3 className="tet-2xl py-2 md:text-3xl  dark:text-white">Software Developer</h3>
-          <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto  dark:text-white">Web developer with a good experience of front end development for responsive website design. Passionate about learning and development with a desire to apply skills on a larger development team</p>
+          <h3 className="text-2xl py-2 md:text-3xl  dark:text-white">Software Developer</h3>
+          <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto  dark:text-white">My name is Mandeep Kaur.   I am a software engineering student at Centennial College in Toronto, Canada. Although I'm eager to learn everything there is to know about technology and am working towards becoming a full stack software engineer, I currently feel more at ease with front-end programming. I'm also interested in graphic design, or what you can refer to as UI/UX designs of websites, in addition to software engineering.</p>
          </div>
          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600  dark:text-white">
           <a href="https://www.linkedin.com/in/mandeep-kaur-a12201256/"><AiFillLinkedin /></a>
           
          <AiFillYoutube/>
          </div>
-         <div className="relative mx-auto  rounded-full w-20 h-15 mt-20 ">
-          <Image src={deved} />
+         <div className="relative mx-auto  rounded-full w-80 h-50 mt-20 ">
+          <Image src={myImg} />
          </div>
         </section>
 
         
 
         <section>
-        <div >
-            <h3 className="text-3xl py-1 mt-20 text-center font-burtons  dark:text-white">Services I offer</h3>
+        
+          <div className="lg:center gap-10">
+          
+            <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-black relative mx-auto  bg-slate-50">
+            <h3 className=" text-3xl py-1 mt-20 text-center font-burtons  dark:text-white ">Education</h3>
+            <Image src={Logo} width={400} height={200}className="mt-10"  />
+            {/* <h2 className="text-lg font-medium pt-8 pb-2">Centennial College- Toronto CAN</h2> */}
+            <h3 className="text-2xl py-2 md:text-3xl  dark:text-white">Centennial College- Toronto CAN</h3>
+            <h2 className="text-xl py-2 md:text-2xl  dark:text-white">Diploma of Software Engineering</h2>
+            <h2 className="text-xl py-2 md:text-xl  dark:text-white">Jan 2022 - Grad in Apr 2023</h2>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div className="lg:center ">
+          
+            <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-black relative mx-auto  bg-slate-50">
+            <h3 className=" text-3xl py-1 mt-20 text-center font-burtons  dark:text-white">Experience</h3>
+            <Image src={eLogo} width={400} height={200}className="mt-10"  />
+            {/* <h2 className="text-lg font-medium pt-8 pb-2">Centennial College- Toronto CAN</h2> */}
+            <h2 className="text-2xl py-2 md:text-2xl  dark:text-white">WIMTACH,Centennial College- Toronto CAN</h2>
+            <h2 className="text-xl py-2 md:text-2xl  dark:text-white">FrontEnd Developer, UI/UX Designer</h2>
+            <h2 className="text-xl py-2 md:text-xl  dark:text-white">Dec 2022 - March 2023(4months intern)</h2>
+            <Image src={vLogo} width={300} height={200}className="mt-10"  />
+            <h2 className="text-2xl py-2 md:text-2xl  dark:text-white">CCSAI,Centennial College- Toronto CAN</h2>
+            <h2 className="text-xl py-2 md:text-2xl  dark:text-white">E-mentor,Organized events for International students to help them.</h2>
+            <h2 className="text-xl py-2 md:text-xl  dark:text-white">Sept 2022 - Dec 2022</h2>
+            </div>
+          </div>
+        </section>
+
+        <section>
+
+        <div className="lg:center ">
+          
+          <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-black relative mx-auto  bg-slate-50">
+          <div >
+            <h3 className="text-3xl py-1 mt-20 text-center font-burtons  dark:text-white">Side Projects</h3>
             <p className="text-md py-2 leading-8 text-gray-800 md:text-xl  dark:text-white">
               Since im just in the beginning of my career as a software developer, I've done <span className="text-md py-2 text-teal-600">freelancing</span> for students websites and <span className="text-md py-2 text-teal-600">collaborated</span> with WIMTACH a association at my college to build a <span className="text-md py-2 text-teal-600">beautiful website</span> to support special aid students.
             </p>
@@ -81,51 +116,163 @@ export default function Home() {
             </div>
             <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-white">
             <Image src={code} width={100} height={100}className="mt-10"  />
-            <h3 className="text-lg font-medium pt-8 pb-2">Programming</h3>
+            <h3 className="text-lg font-medium pt-8 pb-2">Convert Case</h3>
+            <h4 className="py-2 text-teal-600">
+            ConvertCase Application Built with React
+            </h4><br></br>
+            <a href="https://case-convert.vercel.app" className="py-4 text-teal-600" >Website, Click Here!</a><br></br><br></br>
+            <a href="https://github.com/Mandeep180/CaseConvert.git" className="py-4 text-black">Repo, Click Here!</a>
+            </div>
+            <div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+            <Image src={design} width={100} height={100}className="mt-10"  />
+            <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
             <p className="py-2">
-              Websites created with various programming languages.
+              Elegant designs created as per clients needs.
             </p>
-            <h4 className="py-4 text-teal-600">Languages, frameworks and libraries used are mentioned below</h4>
-            <p className="text-gray-800 py-1">Java</p>
-            <p className="text-gray-800 py-1">C#</p>
-            <p className="text-gray-800 py-1">JavaScript</p>
-            <p className="text-gray-800 py-1">React Library</p>
-            <p className="text-gray-800 py-1">MERN and MEAN stack</p>
+            <h4 className="py-4 text-teal-600">Design tools I use</h4>
+            <p className="text-gray-800 py-1">Photoshop</p>
+            <p className="text-gray-800 py-1">Figma</p>
+            <p className="text-gray-800 py-1">Illustrator</p>
+
             </div>
           </div>
+          </div>
+        </div>
+        
         </section>
+
+
 
         <section>
-          <div>
-            <h3 className="text-3xl py-1 mt-20 text-center font-burtons  dark:text-white">Portfolio</h3>
-            <p className="text-md py-2 leading-8  text-gray-800  dark:text-white">web developer with broad expertise in both front-end and back-end work. competent to construct scalable and stable online applications using  HTML, CSS, JavaScript, and a variety of web development frameworks and libraries like MERN and MEAN stack.</p>
-          </div>
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1">
-              <Image src={web1} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
-              </div>
-          
-          
-            <div className="basis-1/3 flex-1">
-              <Image src={web2} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
-              </div>
-         
-         
-            <div className="basis-1/3 flex-1">
-              <Image src={web3} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
-              </div>
 
-            <div className="basis-1/3 flex-1">
-            <a href="https://case-convert.vercel.app/"><Image src={Keyboard} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/></a>
-              </div>
+        <div className="lg:center ">
+          
+          <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-black relative mx-auto  bg-slate-50">
+          <div >
+            <h3 className="text-3xl py-1 mt-20 text-center font-burtons  dark:text-white">Skills</h3> 
+          </div>
+
+
+            <div className="lg:flex gap-10">
+            <div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+             <h3 className="text-2xl font-medium pt-8 pb-2 text-teal-600">BackEnd</h3>
+             
+             <p className="py-2 text-teal-600">
+              Backend skills practiced on various projects.
+            </p>
+            <h2 className="text-left "> Express.JS-Experienced</h2><br></br>
+                <div
+                  className="bg-[#30E3CA] h-2.5 rounded-full ">
+                </div><br></br>
+
+             <h2 className="text-left "> Node.JS-Experienced</h2> <br></br>  
+                  <div
+                  className="bg-[#30E3CA] h-2.5 rounded-full "> 
+                  </div><br></br>
+              <h2 className="text-left ">MongoDB-Experienced</h2><br></br>
+                    <div
+                    className="bg-[#30E3CA] h-2.5 rounded-full ">
+                    </div><br></br>
+              <h2 className="text-left ">C#-Basic</h2> <br></br>
+                    <div
+                    className="bg-[#30E3CA] h-2.5 rounded-full ">
+                    </div><br></br>
+              <h2 className="text-left ">SQL-Basic</h2>  <br></br>
+                    <div
+                    className="bg-[#30E3CA] h-2.5 rounded-full ">
+                    </div> <br></br>
+              <h2 className="text-left ">Python-Intermediate</h2>  <br></br>
+                    <div
+                    className="bg-[#30E3CA] h-2.5 rounded-full ">
+                      </div> <br></br>           
+            </div>
+              
+
+
+            <div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+             <h3 className="text-2xl font-medium pt-8 pb-2 text-teal-600">FrontEnd</h3>
+             
+             <p className="py-2 text-teal-600">
+              FrontEnd skills performed on various projects, check projects.
+            </p>
+            <h2 className="text-left "> React.JS-Intermediate</h2><br></br>
+                <div
+                  className="bg-[#30E3CA] h-2.5 rounded-full ">
+                </div><br></br>
+
+             <h2 className="text-left "> Next.JS-Basic</h2> <br></br>  
+                  <div
+                  className="bg-[#30E3CA] h-2.5 rounded-full "> 
+                  </div><br></br>
+              <h2 className="text-left ">TailwindCSS-Intermediate</h2><br></br>
+                    <div
+                    className="bg-[#30E3CA] h-2.5 rounded-full ">
+                    </div><br></br>
+              <h2 className="text-left ">Angular14-Basic</h2> <br></br>
+                    <div
+                    className="bg-[#30E3CA] h-2.5 rounded-full ">
+                    </div><br></br>
+              <h2 className="text-left ">HTML/CSS-Experienced</h2>  <br></br>
+                    <div
+                    className="bg-[#30E3CA] h-2.5 rounded-full ">
+                    </div> <br></br>
+              <h2 className="text-left ">JS-Intermediate</h2>  <br></br>
+                    <div
+                    className="bg-[#30E3CA] h-2.5 rounded-full ">
+                      </div> <br></br>           
+            </div>
+
+            <div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+            <h3 className="text-2xl font-medium pt-8 pb-2 text-teal-600">Data Analysis</h3>
+            <p className="py-2 text-teal-600">
+              DataAnalysis performed on python related projects.
+            </p>
+            <h2 className="text-left "> matplotlib-Intermediate</h2><br></br>
+                <div
+                  className="bg-[#30E3CA] h-2.5 rounded-full ">
+                </div><br></br>
+
+             <h2 className="text-left "> Pandas-Basic</h2> <br></br>  
+                  <div
+                  className="bg-[#30E3CA] h-2.5 rounded-full "> 
+                  </div><br></br>
+            </div>
+
+          </div>
+          </div>
+        </div>
+        
+        </section>
+
+
+
+
+
+      
+
+
+        <section>
+          <div className="lg:center ">
+          
+            <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-black relative  bg-slate-50 ">
+            <h3 className=" text-3xl py-1 mt-20 text-center font-burtons  dark:text-white">Contact Me</h3>
+            <h2 className="text-2xl py-1 text-teal-600">Currently looking for full-time/part-time FrontEnd opportunities, contact me if you have available position, thanks!</h2>
+            <h2 className= "text-xl text-gray-800 text-right dark:text-white">Email address</h2>
+            <h2 className= "text-xl text-gray-800 text-right dark:text-white">mk0805511@gmail.com</h2>
+            <h2 className= "text-xl dark:bg-black text-gray-800 text-right hover: bg-slate-50 hover:text-black border-solid border-2 font-Poppins py-2 px-4 "><a href="url">Send email</a></h2>
+            </div>
+           
           </div>
         </section>
+
+        
+
+        
       </main>
     </>
     </div>
   )
 }
-
 
 
 
