@@ -107,9 +107,13 @@ export default function Home() {
             <Image src={Blog} width={200} height={100}className="mt-10"  />
             <h3 className="text-lg font-medium pt-8 pb-2">MyBlogZZ</h3>
             <h4 className="py-2 text-teal-600">
-            Full Stack Blog website made using MERN stack - user can register, login, create and edit their posts
+            Full Stack Blog website made using MERN stack
             </h4>
-            <a href="https://github.com/Mandeep180/MyBlogzz.git" className="py-4 text-black">Repo, Click Here!</a>
+            <p className="text-gray-800 py-1">user can register, login</p>
+            <p className="text-gray-800 py-1">create and edit their posts</p>
+            <p className="text-gray-800 py-1">upload pics for their posts</p>
+            
+            <a href="https://github.com/Mandeep180/MyBlogzz.git" className="py-4 text-teal-600">Repo, Click Here!</a>
 
             </div>
             <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-white">
