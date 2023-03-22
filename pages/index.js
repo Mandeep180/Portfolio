@@ -10,6 +10,7 @@ import Logo from "../public/Logo.png";
 import eLogo from "../public/eLogo.png";
 import vLogo from "../public/vLogo.jpeg";
 import myImg from "../public/myImg.jpg";
+import Blog from "../public/Blog.png";
 
 export default function Home() {
   
@@ -103,15 +104,12 @@ export default function Home() {
           </div>
           <div className="lg:flex gap-10">
           <div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
-            <Image src={design} width={100} height={100}className="mt-10"  />
-            <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
-            <p className="py-2">
-              Elegant designs created as per clients needs.
-            </p>
-            <h4 className="py-4 text-teal-600">Design tools I use</h4>
-            <p className="text-gray-800 py-1">Photoshop</p>
-            <p className="text-gray-800 py-1">Figma</p>
-            <p className="text-gray-800 py-1">Illustrator</p>
+            <Image src={Blog} width={200} height={100}className="mt-10"  />
+            <h3 className="text-lg font-medium pt-8 pb-2">MyBlogZZ</h3>
+            <h4 className="py-2 text-teal-600">
+            Full Stack Blog website made using MERN stack - user can register, login, create and edit their posts
+            </h4>
+            <a href="https://github.com/Mandeep180/MyBlogzz.git" className="py-4 text-black">Repo, Click Here!</a>
 
             </div>
             <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-white">
