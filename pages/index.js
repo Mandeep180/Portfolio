@@ -46,8 +46,8 @@ export default function Home() {
             </div>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600  dark:text-white">
               <a href="https://www.linkedin.com/in/mandeep-kaur-a12201256/"><AiFillLinkedin /></a>
+              <a href="https://www.youtube.com/channel/UC6zYvZHoW9NrZJJpIovXc1Q"><AiFillYoutube /></a>
 
-              <AiFillYoutube />
             </div>
             <div className="relative mx-auto  rounded-full w-80 h-50 mt-20 ">
               <Image src={myImg} />
