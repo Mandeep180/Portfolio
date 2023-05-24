@@ -4,8 +4,9 @@ import { useState } from "react";
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import Image from "next/image";
-import DashboardImage from '../public/DashboardImage.jpg'
-import code from '../public/code.png'
+import DashboardImage from '../public/DashboardImage.jpg';
+import code from '../public/code.png';
+import SurveySite from '../public/SurveySite.png';
 import Logo from "../public/Logo.png";
 import eLogo from "../public/eLogo.png";
 import vLogo from "../public/vLogo.jpeg";
@@ -124,6 +125,18 @@ export default function Home() {
                     </h4><br></br>
                     <a href="https://case-convert.vercel.app" className="py-4 text-teal-600" >Website, Click Here!</a><br></br><br></br>
                     <a href="https://github.com/Mandeep180/CaseConvert.git" className="py-4 text-black">Repo, Click Here!</a>
+                  </div>
+                  <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-white">
+                    <Image src={SurveySite} width={180} height={120} className="mt-10" />
+                    <h3 className="text-lg font-medium pt-8 pb-2">Student Survey Site</h3>
+                    <h4 className="py-2 text-teal-600">
+                      Survey site
+                    </h4><br></br>
+                    <p className="text-gray-800 py-1">EJS, HTML, CSS, Mongodb</p>
+                    <p className="text-gray-800 py-1">user can register, login</p>
+                    <p className="text-gray-800 py-1">Rate their profs</p>
+                    <p className="text-gray-800 py-1">Answer survey questions</p>
+                    <a href="https://github.com/Centennial-Students-Surveys/Main-Repository.git" className="py-4 text-teal-600">Repo, Click Here!</a>
                   </div>
                   <div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
                     <Image src={DashboardImage} width={180} height={120} className="mt-10" />
