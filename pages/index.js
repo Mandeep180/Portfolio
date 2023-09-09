@@ -80,7 +80,7 @@ export default function Home() {
                 {/* <h2 className="text-lg font-medium pt-8 pb-2">Centennial College- Toronto CAN</h2> */}
                 <h2 className="text-2xl py-2 md:text-2xl  dark:text-white">WIMTACH,Centennial College- Toronto CAN</h2>
                 <h2 className="text-xl py-2 md:text-2xl  dark:text-white">FrontEnd Developer, UI/UX Designer</h2>
-                <h2 className="text-xl py-2 md:text-xl  dark:text-white">June 2022 - April 2023(4months intern)</h2>
+                <h2 className="text-xl py-2 md:text-xl  dark:text-white">June 2022 - April 2023(Internship)</h2>
                 <Image src={vLogo} width={300} height={200} className="mt-10" />
                 <h2 className="text-2xl py-2 md:text-2xl  dark:text-white">CCSAI,Centennial College- Toronto CAN</h2>
                 <h2 className="text-xl py-2 md:text-2xl  dark:text-white">E-mentor,Organized events for International students to help them.</h2>
