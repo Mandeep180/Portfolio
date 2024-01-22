@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React, { useRef } from 'react';
+import Link from 'next/link';
 import { useState } from "react";
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
@@ -47,7 +48,10 @@ export default function Home() {
                   <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl  dark:text-white" />
                 </li>
                 <li>
-                  <a className="bg-gradient-to-r from bg-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="/#">Resume</a></li>
+                  <Link href="/#">
+                    <div className="bg-gradient-to-r from bg-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 cursor-pointer">Resume</div>
+                  </Link>
+                </li>
               </ul>
             </nav>
             <div className="text-center p-10">
@@ -62,7 +66,7 @@ export default function Home() {
 
             </div>
             <div className="relative mx-auto  rounded-full w-80 h-50 mt-20 ">
-              <Image src={myImg} />
+              <Image src={myImg} alt="my animated image" />
             </div>
           </section>
 
@@ -74,7 +78,7 @@ export default function Home() {
 
               <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-black relative mx-auto  bg-slate-50">
                 <h3 className=" text-3xl py-1 mt-20 text-center font-burtons  dark:text-white ">Education</h3>
-                <Image src={Logo} width={400} height={200} className="mx-auto my-10" />
+                <Image src={Logo} width={400} height={200} className="mx-auto my-10" alt="centennial logo" />
                 {/* <h2 className="text-lg font-medium pt-8 pb-2">Centennial College- Toronto CAN</h2> */}
                 <h3 className="text-2xl py-2 md:text-3xl  dark:text-white">Centennial College- Toronto CA</h3>
                 <h2 className="text-xl py-2 md:text-2xl  dark:text-white"> I Studied Software Engineering</h2>
@@ -90,7 +94,7 @@ export default function Home() {
               <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-black relative mx-auto  bg-slate-50">
                 <h3 className=" text-3xl py-1 mt-20 text-center font-burtons  dark:text-white">Experience</h3>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-black relative mx-auto bg-slate-50">
-                  <Image src={eLogo} width={400} height={200} className="mx-auto my-10" />
+                  <Image src={eLogo} width={400} height={200} className="mx-auto my-10" alt="WIMTACH logo" />
                   <h2 className="text-2xl py-2 md:text-2xl dark:text-white">FrontEnd Developer @ WIMTACH, Centennial College- Toronto CA</h2>
                   <p className="dark:text-white">November 2022 - March 2023 (Internship)</p>
                   <p className="text-gray-800 text-xl py-2 md:text-xl dark:text-white">
@@ -107,7 +111,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-black relative mx-auto bg-slate-50">
-                  <Image src={flighthub} width={400} height={200} className="mx-auto my-10" />
+                  <Image src={flighthub} width={400} height={200} className="mx-auto my-10" alt="flighthub logo" />
                   <h2 className="text-2xl py-2 md:text-2xl dark:text-white">Software QA analyst @ FlightHub, Montreal CA</h2>
                   <p className="dark:text-white">August 2023 - still here</p>
                   <p className="text-gray-800 text-xl py-2 md:text-xl dark:text-white">
@@ -115,7 +119,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-black relative mx-auto bg-slate-50">
-                  <Image src={CCSAI} width={400} height={200} className="mx-auto my-10" />
+                  <Image src={CCSAI} width={400} height={200} className="mx-auto my-10" alt="CCSAI logo" />
                   <h2 className="text-2xl py-2 md:text-2xl dark:text-white">Mentor @ CCSAI, Centennial College - Toronto CA</h2>
                   <p className="dark:text-white">September 2022 - December 2022</p>
                   <p className="text-gray-800 text-xl py-2 md:text-xl dark:text-white">
@@ -144,7 +148,7 @@ export default function Home() {
                 </div>
                 <div className="lg:flex gap-10">
                   <div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
-                    <Image src={Recipeapi} width={300} height={200} className="my-10 mx-auto" />
+                    <Image src={Recipeapi} width={300} height={200} className="my-10 mx-auto" alt="recipe web image" />
                     <h3 className="text-lg font-medium pt-8 pb-2">Recipe Search API</h3>
 
                     <p className="text-gray-800 py-1">Find the recipes of tens of thousands of dishes</p>
@@ -155,7 +159,7 @@ export default function Home() {
 
                   </div>
                   <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-white">
-                    <Image src={Recipeapi} width={300} height={200} className="my-10 mx-auto" />
+                    <Image src={Recipeapi} width={300} height={200} className="my-10 mx-auto" alt="Doctor web image" />
                     <h3 className="text-lg font-medium pt-8 pb-2">Doctor Appointment</h3>
                     <p>In progress!!!</p>
                     <p className="text-gray-800 py-1">Find the recipes of tens of thousands of dishes</p>
