@@ -3,18 +3,29 @@ import React, { useRef } from 'react';
 import { useState } from "react";
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
+import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import DashboardImage from '../public/DashboardImage.jpg';
-import code from '../public/code.png';
-import SurveySite from '../public/SurveySite.png';
 import Logo from "../public/Logo.png";
 import eLogo from "../public/eLogo.png";
-import vLogo from "../public/vLogo.jpeg";
 import myImg from "../public/myImg.jpg";
-import Blog from "../public/Blog.png";
+import Recipeapi from "../public/Recipeapi.png";
+import flighthub from "../public/flighthub.png"
+import CCSAI from "../public/CCSAI.png"
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
 
+  const handleButtonClick = () => {
+    // Open the project link in a new tab
+    window.open('https://recipeapi-f6mb.vercel.app/', '_blank');
+  };
+
+
+  const handleButtonEmail = () => {
+    // Open the default email client with a pre-filled email
+    window.location.href = 'mailto:mk0805511@gmail.com';
+  };
 
   const [darkMode, setDarkMode] = useState(false);
   return (
@@ -36,17 +47,18 @@ export default function Home() {
                   <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl  dark:text-white" />
                 </li>
                 <li>
-                  <a className="bg-gradient-to-r from bg-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="https://docs.google.com/document/d/1L4OuIeHS09n9jnMtFYczynxy4y64vuzE0b517GmEY8Y/edit?usp=sharing">Resume</a></li>
+                  <a className="bg-gradient-to-r from bg-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="/#">Resume</a></li>
               </ul>
             </nav>
             <div className="text-center p-10">
               <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">Mandeep Kaur</h2>
-              <h3 className="text-2xl py-2 md:text-3xl  dark:text-white">Software Developer</h3>
-              <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto  dark:text-white">My name is Mandeep Kaur.   I am a software engineering student at Centennial College in Toronto, Canada. Although I'm eager to learn everything there is to know about technology and am working towards becoming a full stack software engineer, I currently feel more at ease with front-end programming. I'm also interested in graphic design, or what you can refer to as UI/UX designs of websites, in addition to software engineering.</p>
+              <h3 className="text-2xl py-2 md:text-3xl  dark:text-white">A computer science student from Canada. I excel in development using MERN stack. I also aim to deepen my understanding in various areas of technology and product development .</h3>
+              <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto  dark:text-white">  </p>
             </div>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600  dark:text-white">
               <a href="https://www.linkedin.com/in/mandeep-kaur-a12201256/"><AiFillLinkedin /></a>
               <a href="https://www.youtube.com/channel/UC6zYvZHoW9NrZJJpIovXc1Q"><AiFillYoutube /></a>
+              <a href="https://github.com/Mandeep180"><FaGithub /></a>
 
             </div>
             <div className="relative mx-auto  rounded-full w-80 h-50 mt-20 ">
@@ -62,32 +74,59 @@ export default function Home() {
 
               <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-black relative mx-auto  bg-slate-50">
                 <h3 className=" text-3xl py-1 mt-20 text-center font-burtons  dark:text-white ">Education</h3>
-                <Image src={Logo} width={400} height={200} className="mt-10" />
+                <Image src={Logo} width={400} height={200} className="mx-auto my-10" />
                 {/* <h2 className="text-lg font-medium pt-8 pb-2">Centennial College- Toronto CAN</h2> */}
-                <h3 className="text-2xl py-2 md:text-3xl  dark:text-white">Centennial College- Toronto CAN</h3>
-                <h2 className="text-xl py-2 md:text-2xl  dark:text-white">Diploma of Software Engineering</h2>
-                <h2 className="text-xl py-2 md:text-xl  dark:text-white">Jan 2022 - Grad in Apr 2023</h2>
+                <h3 className="text-2xl py-2 md:text-3xl  dark:text-white">Centennial College- Toronto CA</h3>
+                <h2 className="text-xl py-2 md:text-2xl  dark:text-white"> I Studied Software Engineering</h2>
               </div>
             </div>
           </section>
+
+
 
           <section>
             <div className="lg:center ">
 
               <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-black relative mx-auto  bg-slate-50">
                 <h3 className=" text-3xl py-1 mt-20 text-center font-burtons  dark:text-white">Experience</h3>
-                <Image src={eLogo} width={400} height={200} className="mt-10" />
-                {/* <h2 className="text-lg font-medium pt-8 pb-2">Centennial College- Toronto CAN</h2> */}
-                <h2 className="text-2xl py-2 md:text-2xl  dark:text-white">WIMTACH,Centennial College- Toronto CAN</h2>
-                <h2 className="text-xl py-2 md:text-2xl  dark:text-white">FrontEnd Developer, UI/UX Designer</h2>
-                <h2 className="text-xl py-2 md:text-xl  dark:text-white">June 2022 - April 2023(Internship)</h2>
-                <Image src={vLogo} width={300} height={200} className="mt-10" />
-                <h2 className="text-2xl py-2 md:text-2xl  dark:text-white">CCSAI,Centennial College- Toronto CAN</h2>
-                <h2 className="text-xl py-2 md:text-2xl  dark:text-white">E-mentor,Organized events for International students to help them.</h2>
-                <h2 className="text-xl py-2 md:text-xl  dark:text-white">Sept 2022 - Dec 2022</h2>
+                <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-black relative mx-auto bg-slate-50">
+                  <Image src={eLogo} width={400} height={200} className="mx-auto my-10" />
+                  <h2 className="text-2xl py-2 md:text-2xl dark:text-white">FrontEnd Developer @ WIMTACH, Centennial College- Toronto CA</h2>
+                  <p className="dark:text-white">November 2022 - March 2023 (Internship)</p>
+                  <p className="text-gray-800 text-xl py-2 md:text-xl dark:text-white">
+                    Developed a responsive React website from scratch, both on the client and server side, for an association. The website is used on a massive scale by disabled students and health workers. Collaborated with project stakeholders and product management following best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations.
+                  </p>
+                  <div className="flex justify-center mt-4">
+                    <button className="bg-white border-black text-black px-4 py-2 mr-2 rounded-md">React</button>
+                    <button className="bg-white border-black text-black px-4 py-2 mr-2 rounded-md">MongoDB</button>
+                    <button className="bg-white border-black text-black px-4 py-2 mr-2 rounded-md">Express</button>
+                    <button className="bg-white border-black text-black px-4 py-2 mr-2 rounded-md">Nodejs</button>
+                    <button className="bg-white border-black text-black px-4 py-2 rounded-md">Figma</button>
+
+
+                  </div>
+                </div>
+                <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-black relative mx-auto bg-slate-50">
+                  <Image src={flighthub} width={400} height={200} className="mx-auto my-10" />
+                  <h2 className="text-2xl py-2 md:text-2xl dark:text-white">Software QA analyst @ FlightHub, Montreal CA</h2>
+                  <p className="dark:text-white">August 2023 - still here</p>
+                  <p className="text-gray-800 text-xl py-2 md:text-xl dark:text-white">
+                    As a part of the Content Integration team, I skillfully utilized POSTMAN for precise API testing and demonstrated proficiency in leveraging SQL for efficient data handling. My collaboration with Developers and Stakeholders led to a 15% increase in accuracy during test planning and execution. Meticulous documentation resulted in alot of reduction in post-release defects, while proactive test strategy creation contributed to a 30% improvement in testing effectiveness. Collaborative problem-solving led to a 40% increase in product stability, ensuring the delivery of a top-notch product to end-users.
+                  </p>
+                </div>
+                <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-black relative mx-auto bg-slate-50">
+                  <Image src={CCSAI} width={400} height={200} className="mx-auto my-10" />
+                  <h2 className="text-2xl py-2 md:text-2xl dark:text-white">Mentor @ CCSAI, Centennial College - Toronto CA</h2>
+                  <p className="dark:text-white">September 2022 - December 2022</p>
+                  <p className="text-gray-800 text-xl py-2 md:text-xl dark:text-white">
+                    As a Mentor at Centennial College Student Association, I played an important role in supporting the integration of international students into the college community. My commitment extended to addressing weekly inquiries from international students, offering insights, and aiding them with study-related queries, particularly in the field of Software Engineering. Through these efforts, I contributed to fostering a supportive and inclusive atmosphere for students from diverse backgrounds.
+                  </p>
+                </div>
+
               </div>
             </div>
           </section>
+
 
           <section>
 
@@ -105,38 +144,26 @@ export default function Home() {
                 </div>
                 <div className="lg:flex gap-10">
                   <div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
-                    <Image src={Blog} width={200} height={100} className="mt-10" />
-                    <h3 className="text-lg font-medium pt-8 pb-2">MyBlogZZ</h3>
-                    <h4 className="py-2 text-teal-600">
-                      Full Stack Blog website made using MERN stack
-                    </h4>
-                    <p className="text-gray-800 py-1">user can register, login</p>
-                    <p className="text-gray-800 py-1">create and edit their posts</p>
-                    <p className="text-gray-800 py-1">upload pics for their posts</p>
+                    <Image src={Recipeapi} width={300} height={200} className="my-10 mx-auto" />
+                    <h3 className="text-lg font-medium pt-8 pb-2">Recipe Search API</h3>
 
-                    <a href="https://github.com/Mandeep180/MyBlogzz.git" className="py-4 text-teal-600">Repo, Click Here!</a>
+                    <p className="text-gray-800 py-1">Find the recipes of tens of thousands of dishes</p>
+                    <button onClick={handleButtonClick} className=" bg-cyan-500 to-teal-500 text-black px-4 py-2 mr-2 rounded-md"> Open Project
+
+                    </button><br></br>
+                    <a href="https://github.com/Mandeep180/Recipeapi.git" className="py-4 text-teal-600">Git Repo, Click Here!</a>
 
                   </div>
                   <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-white">
-                    <Image src={code} width={100} height={100} className="mt-10" />
-                    <h3 className="text-lg font-medium pt-8 pb-2">Convert Case</h3>
-                    <h4 className="py-2 text-teal-600">
-                      ConvertCase Application Built with React
-                    </h4><br></br>
-                    <a href="https://case-convert.vercel.app" className="py-4 text-teal-600" >Website, Click Here!</a><br></br><br></br>
-                    <a href="https://github.com/Mandeep180/CaseConvert.git" className="py-4 text-black">Repo, Click Here!</a>
-                  </div>
-                  <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-white">
-                    <Image src={SurveySite} width={180} height={120} className="mt-10" />
-                    <h3 className="text-lg font-medium pt-8 pb-2">Student Survey Site</h3>
-                    <h4 className="py-2 text-teal-600">
-                      Survey site
-                    </h4><br></br>
-                    <p className="text-gray-800 py-1">EJS, HTML, CSS, Mongodb</p>
-                    <p className="text-gray-800 py-1">user can register, login</p>
-                    <p className="text-gray-800 py-1">Rate their profs</p>
-                    <p className="text-gray-800 py-1">Answer survey questions</p>
-                    <a href="https://github.com/Centennial-Students-Surveys/Main-Repository.git" className="py-4 text-teal-600">Repo, Click Here!</a>
+                    <Image src={Recipeapi} width={300} height={200} className="my-10 mx-auto" />
+                    <h3 className="text-lg font-medium pt-8 pb-2">Doctor Appointment</h3>
+                    <p>In progress!!!</p>
+                    <p className="text-gray-800 py-1">Find the recipes of tens of thousands of dishes</p>
+                    <button onClick={handleButtonClick} className=" bg-cyan-500 to-teal-500 text-black px-4 py-2 mr-2 rounded-md"> Open Project
+
+                    </button><br></br>
+                    <a href="https://github.com/Mandeep180/Recipeapi.git" className="py-4 text-teal-600">Git Repo, Click Here!</a>
+
                   </div>
                   <div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white">
                     <Image src={DashboardImage} width={180} height={120} className="mt-10" />
@@ -271,10 +298,15 @@ export default function Home() {
 
               <div className="text-center  shadow-lg p-10 rounded-xl my-10  dark:bg-black relative  bg-slate-50 ">
                 <h3 className=" text-3xl py-1 mt-20 text-center font-burtons  dark:text-white">Contact Me</h3>
-                <h2 className="text-2xl py-1 text-teal-600">Currently looking for full-time/part-time FrontEnd opportunities, contact me if you have available position, thanks!</h2>
+                <h2 className="text-2xl py-1 text-teal-600">Currently looking for full-time FrontEnd Developer opportunities, contact me if you have available position, thanks!</h2>
                 <h2 className="text-xl text-gray-800 text-right dark:text-white">Email address</h2>
                 <h2 className="text-xl text-gray-800 text-right dark:text-white">mk0805511@gmail.com</h2>
-                <h2 className="text-xl dark:bg-black text-gray-800 text-right hover: bg-slate-50 hover:text-black border-solid border-2 font-Poppins py-2 px-4 "><a href="url">Send email</a></h2>
+                <button
+                  onClick={handleButtonEmail}
+                  className="text-xl dark:bg-black text-gray-800 bg-slate-50 hover:bg-black hover:text-white border-solid border-2 font-Poppins py-2 px-4"
+                >
+                  Send email
+                </button>
               </div>
 
             </div>
